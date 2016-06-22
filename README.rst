@@ -8,6 +8,14 @@ To use (with caution), simply do::
     >>> print futs.joke()
 ```
 
+Python functions:
+--------
+- check_for_sensible_lat_long:
+
+Other tools:
+--------
+There's a bunch of scripts in the bin/ dir that are added to your path when you install this package.
+- unpack: Extract common file formats, dependencies: unrar, unzip, p7zip
 
 Installation.
 --------
