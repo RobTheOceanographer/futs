@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+import robs_tool_belt
+
+print robs_tool_belt.joke()
