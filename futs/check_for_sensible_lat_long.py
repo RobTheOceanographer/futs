@@ -19,4 +19,4 @@ def check_for_sensible_lat_long(ground_position, order_expected = ['lat','lon'])
         assert (ground_position[0] <= 180) & (ground_position[0] >= -180), "Your longitude values seem to be inccorrect. I expected them to be between -180 and 180."
     else:
         print "I am not familiar with your order_expected, there might be a typo there. I expected it to be either ['lat','lon'] or ['lon','lat']."
-    print "Lat and Lon values seem sensible."
+    return "Lat and Lon values seem sensible."
