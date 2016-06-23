@@ -4,13 +4,20 @@ A bunch of stuff that if find useful and have developed over the years.
 
 To use (with caution), simply do::
 ```
-    >>> import futs
-    >>> print futs.joke()
+    import futs
+    print futs.joke()
+```
+
+To run the unit tests i've written:
+```
+python setup.py test
 ```
 
 Python functions:
 --------
 - check_for_sensible_lat_long:
+- time_above_the_horizon:
+- when_is_sunrise_and_sunset:
 
 Other tools:
 --------
@@ -21,11 +28,11 @@ Installation.
 --------
 Now we can install the package locally (for use on our system), with:
 
-```$ python setup.py install ```
+```python setup.py install ```
 
 We can also install the package with a symlink, so that changes to the source files will be immediately available to other users of the package on our system:
 
-```$ python setup.py develop ```
+```python setup.py develop ```
 
 
 This package was put together using these instructions

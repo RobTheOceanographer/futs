@@ -2,3 +2,5 @@
 
 from .text import joke
 from .check_for_sensible_lat_long import check_for_sensible_lat_long
+from .time_above_the_horizon import time_above_the_horizon
+from .when_is_sunrise_and_sunset import when_is_sunrise_and_sunset

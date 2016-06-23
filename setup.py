@@ -20,8 +20,9 @@ setup(name='Frequently Used Tools',
             'bin/unpack',
             ],
       install_requires=[
-          'markdown',
+          "markdown",
           "pyorbital",
           "ephem",
+          "datetime",
       ],
       zip_safe=False)
