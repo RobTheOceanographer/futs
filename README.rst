@@ -18,6 +18,8 @@ Python functions:
 - check_for_sensible_lat_long:
 - time_above_the_horizon:
 - when_is_sunrise_and_sunset:
+- which_time_zone:
+- local_to_utc
 
 Other tools:
 --------

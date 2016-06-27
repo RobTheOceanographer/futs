@@ -24,5 +24,7 @@ setup(name='Frequently Used Tools',
           "pyorbital",
           "ephem",
           "datetime",
+          "numpy",
+          "tzwhere",
       ],
       zip_safe=False)
