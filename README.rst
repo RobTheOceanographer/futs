@@ -2,13 +2,15 @@ Frequently Used Tools (FUTS)
 --------
 A bunch of stuff that if find useful and have developed over the years.
 
-To use (with caution), simply do::
+To use (with caution), simply do:
+
 ```
-    import futs
-    print futs.joke()
+import futs
+print futs.joke()
 ```
 
 To run the unit tests i've written:
+
 ```
 python setup.py test
 ```
@@ -19,7 +21,9 @@ Python functions:
 - time_above_the_horizon:
 - when_is_sunrise_and_sunset:
 - which_time_zone:
-- local_to_utc
+- local_to_utc:
+- extract_daylight_passes:
+
 
 Other tools:
 --------
