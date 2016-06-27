@@ -6,6 +6,7 @@ To use (with caution), simply do:
 
 ```
 import futs
+
 print futs.joke()
 ```
 
