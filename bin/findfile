@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# findfile: Search for the given string in filenames recursive of the spot you run it.
+# can use wildcards.
+
+# Dependencies: find
+
+# Author: Rob Johnson
+# robtheoceanographer@gmail.com
+
+if [ $# -eq 0 ]
+  then
+    echo "Hold up - No arguments supplied!"
+    exit 1
+fi
+
+find . -iname $1

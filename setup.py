@@ -18,6 +18,9 @@ setup(name='Frequently Used Tools',
       scripts=[
             'bin/funniest_joke',
             'bin/unpack',
+            'bin/findin',
+            'bin/findfile',
+            'bin/deepsearch',
             ],
       install_requires=[
           "markdown",

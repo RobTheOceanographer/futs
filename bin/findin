@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# findin: Search for the given string within all files recursive of the spot you run it.
+# wildcards work here.
+
+# Dependencies: find
+
+# Author: Rob Johnson
+# robtheoceanographer@gmail.com
+
+if [ $# -eq 0 ]
+  then
+    echo "Hold up - No arguments supplied!"
+    exit 1
+fi
+
+grep --colour -ri $1 .

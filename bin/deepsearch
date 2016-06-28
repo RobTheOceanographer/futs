@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# deepsearch: Search everything for the string you pass to this function.
+
+# Dependencies: find fgrep
+
+# Author: Rob Johnson
+# robtheoceanographer@gmail.com
+
+if [ $# -eq 0 ]
+  then
+    echo "Hold up - No arguments supplied!"
+    exit 1
+fi
+
+find . -name '*' -exec fgrep --colour -ri $1 {} /dev/null \;
