@@ -29,6 +29,7 @@ Python functions:
 - round_up_to_nearest:
 - round_to_nearest:
 - closest_five_min_granule_time:
+- calculate_series_of_granule_HHMM:
 
 Other tools:
 --------
