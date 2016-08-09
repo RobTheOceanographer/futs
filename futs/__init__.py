@@ -13,3 +13,4 @@ from .round_up_to_nearest import round_up_to_nearest
 from .round_to_nearest import round_to_nearest
 from .closest_five_min_granule_time import closest_five_min_granule_time
 from .calculate_series_of_granule_HHMM import calculate_series_of_granule_HHMM
+from .addSecs import addSecs

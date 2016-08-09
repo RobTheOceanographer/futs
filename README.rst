@@ -30,6 +30,7 @@ Python functions:
 - round_to_nearest:
 - closest_five_min_granule_time:
 - calculate_series_of_granule_HHMM:
+- addSecs
 
 Other tools:
 --------
