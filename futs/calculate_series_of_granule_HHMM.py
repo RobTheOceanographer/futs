@@ -1,3 +1,5 @@
+import datetime
+import futs
 def calculate_series_of_granule_HHMM(risetime_HHMM, falltime_HHMM, step=5):
     '''calculate_series_of_granule_HHMM takes a rise and fall time as HHMM and works out what the 5min granule times are for between those times.
 
@@ -10,16 +12,33 @@ def calculate_series_of_granule_HHMM(risetime_HHMM, falltime_HHMM, step=5):
     Contact:
     robtheoceanographer@gmail.com
     '''
-    #calculate the range of numbers as if they were ints.
-    tmp_granule_series = range(int(risetime_HHMM), (int(falltime_HHMM)+step), step)
+    # calculate the difference between the two numbers as if they were datetimes.
+    falltime_HHMM_dobj = datetime.datetime.strptime(falltime_HHMM,'%H%M')
+    risetime_HHMM_dobj = datetime.datetime.strptime(risetime_HHMM,'%H%M')
+    timediff = falltime_HHMM_dobj - risetime_HHMM_dobj
+    # how many steps is that?
+    number_of_5min_granules = timediff.seconds/60/step
+    # add the number of steps to the risetime.
+    tmp_granule_series = []
+    tmp_granule_series.append(risetime_HHMM_dobj)
+    for g in range(number_of_5min_granules):
+        tmp_granule_series.append(futs.addSecs(tmp_granule_series[g], secs=60*step))
+    del(g)
+    # convert the datetimes back to HHMM strings.
     granule_series = []
-    # this checks if the granule number has a 0 in front (e.g. 0210) and is not just three numbers (e.g. 210) as the ftp sites always use file names like 0210. It also makes them strings.
-    for HMM_time in tmp_granule_series:
-        if len(str(HMM_time)) is 3:
-            HHMM_time = '0'+str(HMM_time)
-            granule_series.append(HHMM_time)
-        else:
-            granule_series.append(str(HMM_time))
-    # print tmp_granule_series
-    # print granule_series
+    for g in tmp_granule_series:
+        granule_series.append(g.time().strftime('%H%M'))
     return granule_series
+    # #calculate the range of numbers as if they were ints.
+    # tmp_granule_series = range(int(risetime_HHMM), (int(falltime_HHMM)+step), step)
+    # granule_series = []
+    # # this checks if the granule number has a 0 in front (e.g. 0210) and is not just three numbers (e.g. 210) as the ftp sites always use file names like 0210. It also makes them strings.
+    # for HMM_time in tmp_granule_series:
+    #     if len(str(HMM_time)) is 3:
+    #         HHMM_time = '0'+str(HMM_time)
+    #         granule_series.append(HHMM_time)
+    #     else:
+    #         granule_series.append(str(HMM_time))
+    # # print tmp_granule_series
+    # # print granule_series
+    # return granule_series

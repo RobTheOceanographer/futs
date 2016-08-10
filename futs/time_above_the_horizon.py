@@ -10,7 +10,7 @@ def time_above_the_horizon(ground_position_lat, ground_position_lon, date, date_
     ground_position_lon = 146.8169 # The longitude of the ground position (int)
     date = '21/06/2016' # date of the day to find passes on. (This is techincally in local time for your location an is converted to UTC internally here.) (string)
     date_format = "%d/%m/%Y" # the format of thh date string (string)
-    satellite_sensor = 'aqua' # the name of the satellite sensor you are tracking (string) see:
+    satellite_sensor = 'aqua' # the name of the satellite sensor you are tracking (string). for VIIRS use 'SUOMI NPP'
     time_window = 24 # Number of hours to find passes (int)
     elevation = 0 # the elevation of horizon to compute risetime and falltime. (int)
 
