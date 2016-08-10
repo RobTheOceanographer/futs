@@ -14,3 +14,4 @@ from .round_to_nearest import round_to_nearest
 from .calculate_series_of_granule_HHMM import calculate_series_of_granule_HHMM
 from .addSecs import addSecs
 from .date_range import date_range
+from .find_closest_viirs_granule_time import find_closest_viirs_granule_time
