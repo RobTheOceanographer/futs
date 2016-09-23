@@ -15,3 +15,4 @@ from .calculate_series_of_granule_HHMM import calculate_series_of_granule_HHMM
 from .addSecs import addSecs
 from .date_range import date_range
 from .find_closest_granule_time import find_closest_granule_time
+from .ftp_eos_data import ftp_eos_data
